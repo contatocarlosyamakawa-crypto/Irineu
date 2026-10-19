@@ -1,0 +1,14 @@
+# Segredos: nunca no git (regra da família, APPS/CLAUDE.md)
+.env
+.env*
+*.pem
+*.key
+
+# Dado pessoal: backup, exportação e extrato ficam fora do repositório
+irineu-backup*
+*.csv
+*.ofx
+*.qif
+
+# Sistema
+.DS_Store

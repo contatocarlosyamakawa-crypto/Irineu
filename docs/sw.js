@@ -1,7 +1,7 @@
 // Guarda o app no celular pra abrir rápido e até sem internet.
 // Sempre tenta a versão mais nova primeiro; se estiver sem internet, usa a guardada.
-const CACHE='irineu-v5';
-const BASE=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
+const CACHE='irineu-v6';
+const BASE=['./','./index.html','./app.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(BASE)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});
 self.addEventListener('fetch',e=>{

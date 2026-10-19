@@ -1,0 +1,4 @@
+#!/bin/sh
+# Barra commit com segredo ou dado pessoal. Ligado com: git config core.hooksPath .githooks
+PATH="$HOME/.local/node/bin:$PATH"
+exec node scripts/segredos.mjs
